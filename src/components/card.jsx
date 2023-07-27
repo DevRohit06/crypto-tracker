@@ -37,7 +37,7 @@ export default function Card() {
             } else {
               return (
                 <h1 className="text-center flex px-2 py-1 bg-[#109A2F]  rounded-xl ">
-                  <ChevronUp />  {changeMoney.substr(0,3)}
+                  <ChevronUp />  {changeMoney.substr(0,4)}
                 </h1>
               );
             }

@@ -26,4 +26,5 @@ export const useAxios = (params) => {
     return {response, error, loading};
 }
 
+
 export default useAxios;
