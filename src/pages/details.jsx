@@ -22,7 +22,7 @@ const {id} = useParams();
         <Header/>
        <div className="w-5/6 m-6 mx-auto">
 
-       <h1 className="text-dark dark:text-white text-center">{description}</h1>
+       <h1 className="text-dark dark:text-white text-center mb-8">{description}</h1>
         <div className="h-full">
         <TradingViewWidget symbol={response.symbol} />
         </div>
