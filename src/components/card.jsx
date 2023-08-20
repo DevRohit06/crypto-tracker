@@ -14,8 +14,13 @@ export default function Card() {
   }
   return (
     <>
-      <div className="grid-cols-1 w-5/6 mx-auto text-white items-center lg:grid-cols-2 xl:grid-cols-3 grid gap-10">
-        {result.map((data) => {
+  <div className="w-5/6  mx-auto ">
+    <div className="flex justify-between py-4">
+      <h1 className="text-white font-bold text-2xl">All Coins</h1>
+    </div>
+  <div className="grid-cols-1 mx-auto text-white items-center lg:grid-cols-2 xl:grid-cols-3 grid gap-10">
+        
+        {result.slice(0, 5).map((data) => {
           const price = data.current_price.toLocaleString("en-US", {
             style: "currency",
             currency: "USD",
@@ -59,7 +64,7 @@ export default function Card() {
                 <div className="flex justify-between items-center gap-2">
                   <div className="flex items-center">
                     <div className="">
-                      <img width={75} src={data.image} alt="" />
+                      <img className="" width={75} src={data.image} alt="" />
                     </div>
                     <div className="ml-3">
                       <h1 className="text-2xl font-bold">{data.name}</h1>
@@ -79,6 +84,7 @@ export default function Card() {
           );
         })}
       </div>
+  </div>
     </>
   );
 }
